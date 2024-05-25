@@ -11,7 +11,7 @@ function Header() {
 }
 
 function Footer() {
-  const copyright = createElement("span", {
+  const copyright = createElement("div", {
     textContent: `Copyright © ${new Date().getFullYear()}`,
   });
 
@@ -23,7 +23,7 @@ function App() {
 
   initRouter(main);
 
-  return createElement("div", {}, [Header(), main, Footer()]);
+  return createElement("div", { className: 'mainDiv'}, [Header(), main, Footer()]);
 }
 
 export default App;
